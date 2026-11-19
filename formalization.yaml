@@ -1,0 +1,43 @@
+version: v0.4
+project:
+  name: Euclidean midpoint rigidity in every finite dimension
+  description: >-
+    Proof of Nielsen–Okamura Conjecture 9.1. On a connected Euclidean open set,
+    complementary canonical geodesic midpoints of a smooth dual-connection pair
+    force its symmetric cubic tensor to be constant.
+  authors: [JD Jones]
+  responsible_maintainers: [JD Jones]
+  license: MIT
+classification:
+  arxiv: [math.DG]
+  msc2020: [53B12]
+sources:
+  - title: Euclidean midpoint rigidity in every finite dimension
+    type: original-proof
+    relationship: other
+    location: Proof.md
+    note: This development supplies the general-dimensional necessity proof.
+  - title: Dual-connection midpoint matrix means and their Gauss composition
+    authors: [Frank Nielsen, Kazuki Okamura]
+    type: paper
+    id: https://arxiv.org/abs/2609.07551v2
+    location: Section 9, Conjecture 9.1 and Theorems 9.2–9.3
+    relationship: background
+    note: The paper poses the conjecture, derives a fourth-order obstruction and proves the scalar-multiple case.
+related_formalizations:
+  - id: https://github.com/JD-Jones-ASES/PlanarMidpoint/tree/f277b89a3b0db20872101fd61580ecced748e7c1
+    relationship: adapts
+    note: The short-geodesic construction and fourth-order expansion are adapted from the planar proof.
+automation:
+  methods:
+    - method: agent
+      tool_setup: OpenAI Codex and Lean 4
+      notes: AI assistance was used to develop the mathematical argument, construct certificates and write and check the formal proof.
+review:
+  status: self-assessed
+  notes: The formalizing agent compared the statement and its hypotheses with Section 9. The proof has not received external human peer review.
+fidelity:
+  divergences: >-
+    Euclidean index raising represents a symmetric cubic by a commutative bilinear product
+    with self-adjoint multiplication. The neighborhood-of-the-diagonal hypothesis is
+    stated locally at each point using the unique short geodesic for each endpoint pair.
