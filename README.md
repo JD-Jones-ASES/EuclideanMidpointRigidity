@@ -22,3 +22,5 @@ lake build
 ```
 
 Lean and Mathlib are pinned to v4.36.0. On Linux with Bubblewrap available, run `lake comparator` to compare the Challenge and Solution and replay the proof.
+
+To run the registry’s mechanical checks on a standard GitHub-hosted Linux runner, use the [Palomar preflight workflow](https://github.com/JD-Jones-ASES/EuclideanMidpointRigidity/actions/workflows/palomar-preflight.yml).
