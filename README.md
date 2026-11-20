@@ -58,12 +58,6 @@ statement to be compared. The Solution imports the proof in Rigidity.lean.
 The configuration permits `propext`, `Classical.choice`, and `Quot.sound`.
 [Solution](Solution.lean) · [Theorem proof](EuclideanMidpointRigidity/Rigidity.lean) · [GitHub preflight workflow](https://github.com/JD-Jones-ASES/EuclideanMidpointRigidity/actions/workflows/palomar-preflight.yml)
 
-On November 19, 2026, Palomar recorded a mechanical pass for submission
-`69ruehsrjfqs` at commit `4929a3c843e8b8c2905581575d9d5644694e0c79`.
-Lean, NanoDa and con-ron accepted the proof. The later render failed on
-`KaTeX_AMS-Regular.ttf`, a font the pinned Verso renderer writes before it
-reads the document. [Mechanical verification](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/44619915994) · [Render workflow](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/44674063647) · [Verso source](https://github.com/leanprover/verso/blob/6674cf83c82a2c260bf5827d44e58f26568f7cbe/src/verso-html/VersoHtmlMain.lean#L158-L169) · [Upstream issue #203](https://github.com/PalomarRegistry/PalomarSubmission/issues/203)
-
 JD Jones developed this proof with GPT-6.2 Astra in OpenAI Codex, first using
 mathematical prose and Python, then Lean. The project records a self-assessment
 of statement fidelity and is distributed under the MIT license.
