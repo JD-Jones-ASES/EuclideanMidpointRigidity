@@ -2,15 +2,18 @@ version: v0.4
 project:
   name: Euclidean midpoint rigidity in every finite dimension
   description: >-
-    Proof of Nielsen–Okamura Conjecture 9.1. On a connected Euclidean open set,
-    complementary canonical geodesic midpoints of a smooth dual-connection pair
-    force its symmetric cubic tensor to be constant.
+    Let a smooth symmetric cubic tensor on a connected open subset of Euclidean
+    space define two dual connections by adding and subtracting its raised
+    tensor from the Euclidean connection. If the two canonical geodesic
+    midpoints have the same arithmetic mean as their endpoints for all nearby
+    pairs at every point, the cubic tensor is constant throughout the domain.
+    This proves Nielsen–Okamura Conjecture 9.1 in every finite dimension.
   authors: [JD Jones]
   responsible_maintainers: [JD Jones]
   license: MIT
 classification:
   arxiv: [math.DG]
-  msc2020: [53B12]
+  msc2020: ["53B12"]
 sources:
   - title: Euclidean midpoint rigidity in every finite dimension
     type: original-proof
@@ -27,12 +30,27 @@ sources:
 related_formalizations:
   - id: https://github.com/JD-Jones-ASES/PlanarMidpoint/tree/f277b89a3b0db20872101fd61580ecced748e7c1
     relationship: adapts
-    note: The short-geodesic construction and fourth-order expansion are adapted from the planar proof.
+    note: >-
+      The earlier formalization proves the two-dimensional case. This development
+      adapts its short-geodesic construction and fourth-order expansion. The
+      sixth-order analysis and the reduction to a smaller orthogonal factor
+      enter the proof in general dimension.
+status:
+  sorry_count: 0
+  main_results:
+    - declaration: EuclideanMidpointRigidity.euclidean_midpoint_rigidity
+      file: EuclideanMidpointRigidity/Rigidity.lean
+      comparator_config: comparator.json
 automation:
   methods:
     - method: agent
-      tool_setup: OpenAI Codex and Lean 4
-      notes: AI assistance was used to develop the mathematical argument, construct certificates and write and check the formal proof.
+      models: [GPT-6.2 Astra]
+      framework: OpenAI Codex
+      tool_setup: Mathematical prose and Python for the informal argument.
+    - method: agent
+      models: [GPT-6.2 Astra]
+      framework: OpenAI Codex
+      tool_setup: Lean 4 for constructing certificates and writing and checking the formal proof.
 review:
   status: self-assessed
   notes: The formalizing agent compared the statement and its hypotheses with Section 9. The proof has not received external human peer review.
